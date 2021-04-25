@@ -16,7 +16,7 @@ const publicPath=path.resolve(__dirname,'public');
 app.use(express.static(publicPath));
 
 // Mis Rutas
-app.use('/api/leaders', require('./routes/leaders'));
+app.use('/api', require('./routes/leaders'));
 
 // Gris o verder si lo mira como si fuera un string
 server.listen(process.env.PORT, (err) => {
