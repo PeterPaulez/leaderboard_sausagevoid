@@ -32,6 +32,7 @@ const leadersList = async ( _, answer = response ) => {
 
 const leadersAdd = async ( request, answer = response ) => {
     const { name, value, volume } = request.body;
+    //console.log(request.body);
     const leader = new Leader( name, value, volume );
     const fileDB = leerArhivo();
     let leaders = cargarFileBD( fileDB );
